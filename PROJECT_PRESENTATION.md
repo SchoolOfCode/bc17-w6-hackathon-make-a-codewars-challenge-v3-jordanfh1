@@ -6,7 +6,7 @@
 
 
 ## Your Mission 😎
-- First Set up
+### First Set up
 
 1. Clone the repo from github
 2. Run <code>npm install</code> to install vitest
