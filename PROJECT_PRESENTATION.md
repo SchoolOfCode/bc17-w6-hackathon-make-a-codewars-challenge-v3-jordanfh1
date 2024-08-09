@@ -10,9 +10,15 @@
 -----
 
 ## Your Mission 😎
+- First Set up
 
-- Create a function that rolls a dice with any amount of sides
-- Create another function that uses the previous function to roll multiple dice, and apply an additional modifier eg. +2, +5
+1. Clone the repo from github
+2. Run <code>npm install</code> to install vitest
+3. Run npm test to start the test suite
+
+Time for dice rolling
+1. Create a function that rolls a dice with any amount of sides
+2. Create another function that uses the previous function to roll multiple dice, and apply an additional modifier eg. +2, +5
 
 <br>
 Good luck 🤞
