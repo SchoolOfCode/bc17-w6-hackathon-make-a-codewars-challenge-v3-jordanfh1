@@ -17,17 +17,31 @@ test('rollMultipleDice function', () => {
     expect(result.sum).toBeLessThanOrEqual(18);
     expect(result.average).toBeGreaterThanOrEqual(1);
     expect(result.average).toBeLessThanOrEqual(6);
-    expect(result.criticals.max.length).toBeGreaterThanOrEqual(0);
-    expect(result.criticals.min.length).toBeGreaterThanOrEqual(0);
 });
 
-
 test('rollmultiple dice with modifier', () => {
-let result = rollMultipleDice(6, 3, 2);
-expect(result.rolls.length).toBe(3);
+    let result = rollMultipleDice(6, 3, 2);
+    expect(result.rolls.length).toBe(3);
+    expect(result.sum).toBeGreaterThanOrEqual(5);
 
 })
 
 
 
 
+// test('rollMultipleDice with modifier', () => {
+//     let result = rollMultipleDice(6, 3, 2);
+//     expect(result.rolls.length).toBe(3);
+//     expect(result.sum).toBeGreaterThanOrEqual(5);
+//     expect(result.sum).toBeLessThanOrEqual(20);
+//     expect(result.average).toBeGreaterThanOrEqual(1);
+//     expect(result.average).toBeLessThanOrEqual(8);
+//     expect(result.criticals.max.length).toBeGreaterThanOrEqual(0);
+//     expect(result.criticals.min.length).toBeGreaterThanOrEqual(0);
+//     });
+
+// test('rollMultipleDice for errors', () => {
+//     expect(() => rollMultipleDice(6, 0)).toThrow();
+//     expect(() => rollMultipleDice(6, -1)).toThrow();
+//     expect(() => rollMultipleDice(6, 1.5)).toThrow();
+//     });

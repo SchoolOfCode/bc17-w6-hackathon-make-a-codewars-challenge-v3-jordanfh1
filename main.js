@@ -8,23 +8,11 @@ export function rollDice(sides) {
 export function rollMultipleDice(sides, count, modifier = 0) {
     let results = [];
     let sum = 0;
-    let criticals = {
-        max: [],
-        min: []
-    };
     
     for (let i = 0; i < count; i++) {
         let roll = rollDice(sides, modifier);
         results.push(roll);
         sum += roll;
-        
-        // Check for critical rolls
-        if (roll === sides) {
-            criticals.max.push(roll);
-        }
-        if (roll === 1) {
-            criticals.min.push(roll);
-        }
     }
     
     let average = sum / count;
@@ -32,10 +20,10 @@ export function rollMultipleDice(sides, count, modifier = 0) {
     return {
         rolls: results,
         sum: sum,
-        average: average,
-        criticals: criticals
+        average: average
     };
 }
+
 
 console.log(rollDice(6));
 console.log(rollMultipleDice(6, 3));
