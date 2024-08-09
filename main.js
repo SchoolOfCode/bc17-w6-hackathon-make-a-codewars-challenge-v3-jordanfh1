@@ -1,4 +1,4 @@
-// Rolls 
+
 
 
 export function rollDice(sides) {
@@ -10,7 +10,7 @@ export function rollMultipleDice(sides, count, modifier = 0) {
     let sum = 0;
   
     for (let i = 0; i < count; i++) {
-        let roll = rollDice(sides, modifier);
+        let roll = rollDice(sides) + modifier;
         results.push(roll);
         sum += roll;
     }
@@ -20,7 +20,7 @@ export function rollMultipleDice(sides, count, modifier = 0) {
     if (count < 1 || !Number.isInteger(count)) {
         throw new Error('Invalid count');
     }
-    
+
     return {
         rolls: results,
         sum: sum,

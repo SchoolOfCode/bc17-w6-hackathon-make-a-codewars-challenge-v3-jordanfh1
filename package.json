@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npx vitest"
   },
+  "type": "module",
   "author": "School of Code",
   "license": "ISC",
   "dependencies": {

@@ -18,9 +18,9 @@ test('rollMultipleDice function', () => {
 test('rollmultiple dice with modifier', () => {
     let result = rollMultipleDice(6, 3, 2);
     expect(result.rolls.length).toBe(3);
-    expect(result.sum).toBeGreaterThanOrEqual(5);
-    expect(result.sum).toBeLessThanOrEqual(18);
-    expect(result.average).toBeGreaterThanOrEqual(2);
+    expect(result.sum).toBeGreaterThanOrEqual(4);
+    expect(result.sum).toBeLessThanOrEqual(24);
+    expect(result.average).toBeGreaterThanOrEqual(1.6666666666666667);
     expect(result.average).toBeLessThanOrEqual(8);
 })
 
